@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+            color: white;
+            font-size: 27px;
+            font-family: sans-serif;
+            /* font-weight: 600; */
+        }
+        img{
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            top: 0;
+        }
+        .main{
+            margin: 90px auto;
+            width: 30%;
+            height: 75vh;
+            background-color: rgb(32, 32, 32);
+            border-radius: 10px;
+            position: relative;
+        }
+        .input input{
+            width: 100%;           
+             padding: 30px 20px;
+            border-radius: 10px;
+            border: none;
+            background-color: rgb(32, 32, 32);
+            font-size: 50px;
+            /* font-weight: 600; */
+
+        }
+        ::placeholder{
+            color: rgb(255, 255, 255);
+        }
+        .input input:focus{
+            outline: none;
+        }
+        .cal table{
+            width: 100%;
+            padding: .2em ;
+            text-align: center;
+        }
+        table tr td{
+            padding: .9em;
+            border-radius: 20px;
+            background-color: rgb(45, 45, 45);
+            border: none;
+
+        }
+        table td:hover{
+            background-color: rgb(64, 64, 64);
+            cursor: pointer;
+        }
+        .sp{
+            color: rgb(0, 174, 255);
+        }
+        @media screen and (max-width: 500px){
+            .main{
+                width: 80%;
+                height: 73vh;
+            }
+            table tr td{
+                padding: .6em;
+            }
+        }
+        /* @media screen and (max-width: 1200px){
+            .main{
+                width: 40%;
+                height: 70vh;
+            }
+            table tr td{
+                padding: .6em;
+            }
+        } */
+    </style>
+</head>
+<body>
+    <img src="blue-gradient-motion-graphic-background-free-video.webp" alt="" srcset="">
+    <div class="main">
+        <div class="input">
+            <input type="text" name="" id="number" placeholder="0">
+        </div>
+        <div class="cal">
+            <table cellspacing="10px">
+                <tr>
+                    <td class="sp" onclick="setnumber('+')">+</td>
+                    <td class="sp" onclick="setnumber('-')">-</td>
+                    <td class="sp" onclick="setnumber('/')">/</td>
+                    <td class="sp" onclick="setnumber('*')">*</td>
+                </tr>
+                <tr>
+                    <td onclick="setnumber('9')">9</td>
+                    <td onclick="setnumber('8')">8</td>
+                    <td onclick="setnumber('7')">7</td>
+                    <td onclick="ans()" style="background-color: rgb(0, 166, 255);" rowspan="4">=</td>
+                </tr>
+                <tr>
+                    <td onclick="setnumber('6')">6</td>
+                    <td onclick="setnumber('5')">5</td>
+                    <td onclick="setnumber('4')">4</td>
+                </tr>
+                <tr>
+                    <td onclick="setnumber('3')">3</td>
+                    <td onclick="setnumber('2')">2</td>
+                    <td onclick="setnumber('1')">1</td>
+                </tr>
+                <tr>
+                    <td onclick="setnumber('0')">0</td>
+                    <td onclick="del()" class="sp">&lt;</td>
+                    <td onclick="allclear()" class="sp">C</td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>
